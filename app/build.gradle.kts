@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id ("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
 
 android {
@@ -66,4 +67,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation ("io.github.raamcosta.compose-destinations:core:1.9.63")
+    ksp ("io.github.raamcosta.compose-destinations:ksp:1.9.63")
 }
