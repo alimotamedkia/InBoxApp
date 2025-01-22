@@ -31,8 +31,8 @@ import androidx.compose.ui.unit.sp
 fun MessageItem(modifier: Modifier = Modifier, item: InboxMessages) {
 
     OutlinedCard {
-        var isExpanded by rememberSaveable  { mutableStateOf(false) }
-        Column (modifier=Modifier.animateContentSize ()){
+        var isExpanded by rememberSaveable { mutableStateOf(false) }
+        Column(modifier = Modifier.animateContentSize()) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -53,14 +53,15 @@ fun MessageItem(modifier: Modifier = Modifier, item: InboxMessages) {
             }
             if (isExpanded) {
                 Row(
-                    modifier=Modifier.padding(8.dp),
+                    modifier = Modifier.padding(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(modifier = Modifier.weight(2f),text = item.shortMessage)
+                    Text(modifier = Modifier.weight(2f), text = item.shortMessage)
                     Spacer(
                         modifier.weight(0.08f)
                     )
-                    Button(modifier=Modifier.weight(1f),onClick = {}) { Text(text="Action", fontSize = 12.sp)}
+                    Button(modifier = Modifier.weight(1f), onClick = {})
+                    { Text(text = "Action", fontSize = 12.sp) }
                 }
             }
         }
