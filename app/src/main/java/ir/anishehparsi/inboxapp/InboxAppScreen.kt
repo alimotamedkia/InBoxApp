@@ -62,7 +62,7 @@ fun MessageItem(modifier: Modifier = Modifier, item: InboxMessages) {
                     )
                     Button(modifier = Modifier.weight(1f), onClick = {})
                     { Text(text = "Action", fontSize = 12.sp) }
-                }
+
             }
         }
     }
@@ -76,11 +76,11 @@ fun MessageList(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.padding(vertical = 4.dp))
         }
     }
-}
+}}
 
 @Preview
 @Composable
 fun Preview1(modifier: Modifier = Modifier) {
-    MessageList()
+    
 }
 
